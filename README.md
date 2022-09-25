@@ -1,10 +1,40 @@
 # TypeScript-Getting-Started
 
-This is the official repository for my Pluralsight course titled [*TypeScript: Getting Started*](https://app.pluralsight.com/library/courses/typescript-getting-started/table-of-contents). 
-The *main* branch contains code as it 
-exists at the start of the course. There are separate branches named after the modules in the course that contain the code as it 
-exists at the end of that module.
+NOTES:
 
-I will update this repo below with any problems or small issues reported between updates to the actual course.
+## Interfaces vs. Classes
 
-Thanks for watching and good luck on your TypeScript projects!
+|Inferfaces | Classes |
+| --- | ----------- |
+| Define a new type | Define a new type |
+| Properties (sigantures) | Properties (with implementation) |
+| Methods (signatures) | Methods (with implementation)
+| Cannot be instantiated | Can be instantiated
+
+
+## Class Members
+
+* Method implementations
+* Property implementations
+* Accessors (getters and setters)
+* Access modifiers
+    - Public
+    - Private
+    - Protected (it may only be accessed inside the class or any classes that inherit from the class)
+
+
+## Extending a Class
+
+```
+class WebDeveloper extends Developer {
+    favoriteEditor: string;
+    writeTypeScript(): void {
+        // write awesome code
+    }
+}
+
+let webdev: WebDeveloper = new WebDeveloper();
+
+```
+
+* A common practice is to design classes to implement interfaces.
